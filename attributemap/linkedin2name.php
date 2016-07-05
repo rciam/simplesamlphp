@@ -10,8 +10,10 @@ $attributemap = array(
     'linkedin_targetedID' => 'eduPersonTargetedID', // http://linkedin.com!id
 
     // Attributes Returned by LinkedIn
+    'linkedin.formattedName'  => 'displayName', // or cn
     'linkedin.firstName'  => 'givenName',
     'linkedin.lastName'   => 'sn',
+    'linkedin.emailAddress'  => 'mail',
     'linkedin.id'         => 'uid', // alpha + mixed case user id
     'linkedin.headline'   => 'title',
     'linkedin.summary'    => 'description',
