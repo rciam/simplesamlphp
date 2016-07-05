@@ -23,6 +23,22 @@ class sspmod_authlinkedin_Auth_Source_LinkedIn extends SimpleSAML_Auth_Source {
 	private $key;
 	private $secret;
 
+	/**
+	 * A comma-separated list of user profile fields to request.
+	 *
+	 * Note that to access any of the basic profile fields, your app must 
+	 * request the "r_basicprofile" member permission. Other user fields
+	 * require additional permissions. For example, to retrieve the user's
+	 * primary email address, you need to include "r_emailaddress" in 
+	 * default application permissions and also specify "email-address" in
+         * the user_fields parameter.
+	 *
+	 * When empty, no user information will be returned.
+	 *
+	 * See the LinkedIn API documentation for all available user fields:
+	 * https://developer.linkedin.com/docs/fields/basic-profile
+	 */
+	private $user_fields = 'id,first-name,last-name,headline,summary,specialties,picture-url';
 
 	/**
 	 * Constructor for this authentication source.
@@ -46,6 +62,10 @@ class sspmod_authlinkedin_Auth_Source_LinkedIn extends SimpleSAML_Auth_Source {
 			throw new Exception('LinkedIn authentication source is not properly configured: missing [secret]');
 
 		$this->secret = $config['secret'];
+
+		if (array_key_exists('user_fields', $config) && is_string($config['user_fields'])) {
+			$this->user_fields = $config['user_fields'];
+                }
 	}
 
 
@@ -97,8 +117,8 @@ class sspmod_authlinkedin_Auth_Source_LinkedIn extends SimpleSAML_Auth_Source {
 		SimpleSAML_Logger::debug("Got an access token from the OAuth service provider [" .
 			$accessToken->key . "] with the secret [" . $accessToken->secret . "]");
 
-		// TODO: configure attributes (http://developer.linkedin.com/docs/DOC-1061) from config? Limited options via LinkedIn
-		$userdata = $consumer->getUserInfo('https://api.linkedin.com/v1/people/~:(id,first-name,last-name,headline,summary,specialties,picture-url)', $accessToken, array('http' => array('header' => 'x-li-format: json')));
+		// Request user fields (https://developer.linkedin.com/docs/fields/basic-profile)
+		$userdata = $consumer->getUserInfo('https://api.linkedin.com/v1/people/~:(' . $this->user_fields . ')', $accessToken, array('http' => array('header' => 'x-li-format: json')));
 
 		$attributes = array();
 		foreach($userdata AS $key => $value) {

@@ -212,6 +212,10 @@ $config = array(
         'authlinkedin:LinkedIn',
         'key' => 'xxxxxxxxxxxxxxxx',
         'secret' => 'xxxxxxxxxxxxxxxx',
+        // List of user profile fields to request.
+        // Uncomment to change the default list of requested fields.
+        // When empty, no information will be returned.
+        'user_fields' => 'id,first-name,last-name,headline,summary,specialties,picture-url',
     ),
     */
 
