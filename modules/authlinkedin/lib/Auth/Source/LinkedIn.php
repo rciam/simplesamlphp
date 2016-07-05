@@ -131,7 +131,7 @@ class sspmod_authlinkedin_Auth_Source_LinkedIn extends SimpleSAML_Auth_Source {
 
 		if (array_key_exists('id', $userdata) ) {
 			$attributes['linkedin_targetedID'] = array('http://linkedin.com!' . $userdata['id']);
-			$attributes['linkedin_user'] = array($userdata['id'] . '@linkedin.com');
+			//$attributes['linkedin_user'] = array($userdata['id'] . '@linkedin.com');
 		}
 
 		SimpleSAML_Logger::debug('LinkedIn Returned Attributes: '. implode(", ",array_keys($attributes)));
