@@ -189,15 +189,20 @@ class PowerIdPDisco extends \SimpleSAML\XHTML\IdPDisco
         $list = parent::filterList($list);
 
         try {
-            $spmd = $this->metadata->getMetaData($this->spEntityId, 'saml20-sp-remote');
-        } catch (\Exception $e) {
+            if (preg_match('/spentityid=([^&]*)/', urldecode(urldecode($_REQUEST['return'])), $matches)) {
+                $spmd = $this->metadata->getMetaData($matches[1], 'saml20-sp-remote');
+            } else {
+                $spmd = $this->metadata->getMetaData($this->spEntityId, 'saml20-sp-remote');
+            }
+        } catch (Exception $e) {
             return $list;
         }
 
         if (!isset($spmd)) {
             return $list;
         }
-        if (!array_key_exists('discopower.filter', $spmd)) {
+        if (!array_key_exists('discopower.filter', $spmd) &&
+            empty(parent::getScopedIDPList())) {
             return $list;
         }
         $filter = $spmd['discopower.filter'];
@@ -228,6 +233,12 @@ class PowerIdPDisco extends \SimpleSAML\XHTML\IdPDisco
                 $returnlist[$key] = $entry;
             }
         }
+
+        $idpintersection = array_intersect(array_keys($returnlist), parent::getScopedIDPList());
+        if (sizeof($idpintersection) > 0) {
+            $returnlist = array_intersect_key($returnlist, array_fill_keys($idpintersection, null));
+        }
+
         return $returnlist;
     }
 
