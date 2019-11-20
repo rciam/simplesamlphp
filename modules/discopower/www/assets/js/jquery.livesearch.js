@@ -4,7 +4,7 @@ jQuery.fn.liveUpdate = function (list) {
     if (list.length) {
         var rows = list.children('a'),
         cache = rows.map(function () {
-            return jQuery(this).text().toLowerCase();
+            return jQuery(this).text().toLowerCase().replace('\(', '');
         });
 
         this.keyup(filter).keyup().parents('form').submit(function () {
@@ -17,6 +17,7 @@ jQuery.fn.liveUpdate = function (list) {
     function filter()
     {
         var term = jQuery.trim(jQuery(this).val().toLowerCase()), scores = [];
+        term = term.replace('\(', '');
 
         if (!term) {
             rows.show();
