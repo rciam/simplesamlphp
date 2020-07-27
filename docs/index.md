@@ -48,7 +48,7 @@ Documentation on specific SimpleSAMLphp modules:
  * [Consent module](./consent:consent)
  * [Installing and configuring the consentAdmin module](./consentAdmin:consentAdmin)
  * [Authorization](./authorize:authorize)
- * [autotest Module](./autotest:test)
+ * [autotest Module](https://github.com/simplesamlphp/simplesamlphp-module-autotest/blob/v1.0/README.md)
  * [Statistics](./statistics:statistics)
 
 Documentation for SimpleSAMLphp developers:
