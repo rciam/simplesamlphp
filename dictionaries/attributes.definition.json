@@ -151,5 +151,14 @@
 	},
 	"attribute_schacuserprivateattribute": {
 		"en": "Private information elements"
+	},
+	"attribute_vopersonexternalaffiliation": {
+		"en": "Affiliation at home organization"
+	},
+	"attribute_vopersonexternalid": {
+		"en": "Identifier at home organization"
+	},
+	"attribute_vopersonverifiedemail": {
+		"en": "Verified mail"
 	}
 }
