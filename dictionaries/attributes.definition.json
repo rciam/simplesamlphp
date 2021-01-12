@@ -151,5 +151,20 @@
 	},
 	"attribute_schacuserprivateattribute": {
 		"en": "Private information elements"
+	},
+	"attribute_vopersonexternalaffiliation": {
+		"en": "Affiliation at home organization"
+	},
+	"attribute_vopersonexternalid": {
+		"en": "Identifier at home organization"
+	},
+	"attribute_vopersonverifiedemail": {
+		"en": "Verified mail"
+	},
+	"attribute_voPersonCertificateIssuerDN": {
+		"en": "Issuer Distinguished Name (DN) of person's X.509 certificate"
+	},
+	"attribute_voPersonCertificateDN": {
+		"en": "Subject Distinguished Name (DN) of person's X.509 certificate"
 	}
 }

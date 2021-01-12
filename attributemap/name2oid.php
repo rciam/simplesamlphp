@@ -187,6 +187,11 @@ $attributemap = [
     'userPassword'                  => 'urn:oid:2.5.4.35',
     'userSMIMECertificate'          => 'urn:oid:2.16.840.1.113730.3.1.40',
     'userid'                        => 'urn:oid:0.9.2342.19200300.100.1.1',
+    'voPersonCertificateDN'         => 'urn:oid:1.3.6.1.4.1.25178.4.1.3',
+    'voPersonCertificateIssuerDN'   => 'urn:oid:1.3.6.1.4.1.25178.4.1.4',
+    'voPersonExternalAffiliation'   => 'urn:oid:1.3.6.1.4.1.25178.4.1.11',
+    'voPersonExternalID'            => 'urn:oid:1.3.6.1.4.1.25178.4.1.5',
+    'voPersonVerifiedEmail'         => 'urn:oid:1.3.6.1.4.1.25178.4.1.14',
     'x121Address'                   => 'urn:oid:2.5.4.24',
     'x500UniqueIdentifier'          => 'urn:oid:2.5.4.45',
 ];
