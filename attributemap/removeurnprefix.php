@@ -17,4 +17,5 @@ $attributemap = [
     'urn:mace:dir:attribute-def:eduPersonEntitlement'       => 'eduPersonEntitlement',
     'urn:mace:dir:attribute-def:eduPersonOrgDN'             => 'eduPersonOrgDN',
     'urn:mace:dir:attribute-def:eduPersonOrgUnitDN'         => 'eduPersonOrgUnitDN',
+    'urn:mace:dir:attribute-def:eduPersonUniqueId'          => 'eduPersonUniqueId',
 ];
