@@ -47,6 +47,7 @@ $attributemap = [
     'eduPersonAssurance'            => 'urn:mace:dir:attribute-def:eduPersonAssurance',
     'eduPersonEntitlement'          => 'urn:mace:dir:attribute-def:eduPersonEntitlement',
     'eduPersonNickname'             => 'urn:mace:dir:attribute-def:eduPersonNickname',
+    'eduPersonOrcid'                => 'urn:mace:dir:attribute-def:eduPersonOrcid',
     'eduPersonOrgDN'                => 'urn:mace:dir:attribute-def:eduPersonOrgDN',
     'eduPersonOrgUnitDN'            => 'urn:mace:dir:attribute-def:eduPersonOrgUnitDN',
     'eduPersonPrimaryAffiliation'   => 'urn:mace:dir:attribute-def:eduPersonPrimaryAffiliation',
