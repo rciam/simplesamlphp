@@ -1107,7 +1107,11 @@ class SAMLParser
                                 $values[] = $attrval->getString();
                             }
 
-                            $ret['EntityAttributes'][$name] = $values;
+                            if (empty($ret['EntityAttributes'][$name])) {
+                                $ret['EntityAttributes'][$name] = $values;
+                            } else {
+                                $ret['EntityAttributes'][$name] = array_merge($ret['EntityAttributes'][$name], $values);
+                            }
                         }
                     }
                 }
