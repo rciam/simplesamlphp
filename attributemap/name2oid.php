@@ -169,6 +169,7 @@ $attributemap = [
     'stateOrProvinceName'           => 'urn:oid:2.5.4.8',
     'street'                        => 'urn:oid:2.5.4.9',
     'streetAddress'                 => 'urn:oid:2.5.4.9',
+    'subject-id'                    => 'urn:oasis:names:tc:SAML:attribute:subject-id',
     'subtreeMaximumQuality'         => 'urn:oid:0.9.2342.19200300.100.1.52',
     'subtreeMinimumQuality'         => 'urn:oid:0.9.2342.19200300.100.1.51',
     'supportedAlgorithms'           => 'urn:oid:2.5.4.52',
