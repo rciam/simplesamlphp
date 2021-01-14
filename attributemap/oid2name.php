@@ -1,6 +1,7 @@
 <?php
 $attributemap = [
     'urn:mace:egi.eu:attribute-def:isServiceUser' => 'isServiceUser',
+    'urn:oasis:names:tc:SAML:attribute:pairwise-id' => 'pairwise-id',
     'urn:oasis:names:tc:SAML:attribute:subject-id' => 'subject-id',
     'urn:oid:0.9.2342.19200300.100.1.1'  => 'uid',
     'urn:oid:0.9.2342.19200300.100.1.10' => 'manager',

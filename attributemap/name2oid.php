@@ -115,6 +115,7 @@ $attributemap = [
     'owner'                         => 'urn:oid:2.5.4.32',
     'pager'                         => 'urn:oid:0.9.2342.19200300.100.1.42',
     'pagerTelephoneNumber'          => 'urn:oid:0.9.2342.19200300.100.1.42',
+    'pairwise-id'                   => 'urn:oasis:names:tc:SAML:attribute:pairwise-id',
     'personalSignature'             => 'urn:oid:0.9.2342.19200300.100.1.53',
     'personalTitle'                 => 'urn:oid:0.9.2342.19200300.100.1.40',
     'photo'                         => 'urn:oid:0.9.2342.19200300.100.1.7',
