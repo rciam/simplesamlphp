@@ -15,6 +15,7 @@ $attributemap = [
     'eduPersonAffiliation'       => 'urn:mace:dir:attribute-def:eduPersonAffiliation',
     'eduPersonScopedAffiliation' => 'urn:mace:dir:attribute-def:eduPersonScopedAffiliation',
     'eduPersonEntitlement'       => 'urn:mace:dir:attribute-def:eduPersonEntitlement',
+    'eduPersonOrcid'             => 'urn:mace:dir:attribute-def:eduPersonOrcid',
     'eduPersonOrgDN'             => 'urn:mace:dir:attribute-def:eduPersonOrgDN',
     'eduPersonOrgUnitDN'         => 'urn:mace:dir:attribute-def:eduPersonOrgUnitDN',
     'eduPersonUniqueId'          => 'urn:mace:dir:attribute-def:eduPersonUniqueId',
